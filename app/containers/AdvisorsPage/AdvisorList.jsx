@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const TH = styled.th`
   text-transform: uppercase;
@@ -29,7 +30,9 @@ const AdvisorList = ({ advisors }) => {
           <tr key={adv.id}>
             <SmallTD><img src={adv.avatar} alt="avatar" /></SmallTD>
             <AdvisorName>{adv.name}</AdvisorName>
-            <td><a href="#">View Profile</a></td>
+            <td>
+              <Link to={`/advisor/${adv.id}`}>View Profile</Link>
+            </td>
           </tr>
         ))}
       </tbody>

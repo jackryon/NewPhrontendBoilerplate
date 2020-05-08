@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import AdvisorsPage from 'containers/AdvisorsPage';
+import AdvisorDetailsPage from 'containers/AdvisorDetailsPage';
 
 import GlobalStyle from '../../global-styles';
 
@@ -21,6 +22,7 @@ export default function App() {
       <h1>AlwaysClear&trade; Advisors</h1>
       <Switch>
         <Route exact path="/" component={AdvisorsPage} />
+        <Route exact path="/advisor/:id" component={AdvisorDetailsPage} />
       </Switch>
       <GlobalStyle />
     </AppWrapper>
